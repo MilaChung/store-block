@@ -9,7 +9,8 @@ interface TitleProps {
 const CSS_HANDLES = ["title"] as const;
 
 const Title: StorefrontFunctionComponent<TitleProps> = ({ title }) => {
-    const handles = useCssHandles(CSS_HANDLES)
+
+    const handles = useCssHandles(CSS_HANDLES);
     const titleText = title || <FormattedMessage id="countdown.title" />
   
     return (
@@ -18,7 +19,7 @@ const Title: StorefrontFunctionComponent<TitleProps> = ({ title }) => {
       >
         {titleText}
       </div>
-    )
+    );
 }
 
 Title.schema = {
